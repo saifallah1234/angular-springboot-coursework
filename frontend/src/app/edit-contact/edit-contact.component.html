@@ -1,0 +1,12 @@
+<div>
+    <form (submit)="onSubmit(form)" #form="ngForm">
+        name: <input type="text" name="name" ngModel>
+        email: <input type="text" name="email" ngModel>
+        website: <input type="text" name="website" ngModel>
+        projects: <input type="text" name="projects" ngModel>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+    <button class="btn btn-primary mt-5" (click)="onContacts()">Go to contacts</button>
+</div>

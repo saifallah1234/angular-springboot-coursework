@@ -1,0 +1,15 @@
+<div>
+    <ul>
+        <li>name : {{personne.name}}</li>
+        <li>email : {{personne.email}}</li>
+        <li>tel : {{personne.tel}}</li>
+    </ul>
+    <h3>new Message</h3><br>
+    <input type="text" class="form-control" placeholder="ajouter un commentaire" [(ngModel)]="comment.content">
+    
+    <button (click)="addComment()" [disabled]="newComment"> Ajouter</button>
+
+    <div>
+        <app-comment [commentList]="comments"></app-comment>
+    </div>
+</div>

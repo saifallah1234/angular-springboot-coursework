@@ -1,0 +1,17 @@
+# Frontend
+frontend/node_modules/
+frontend/.angular/
+frontend/dist/
+
+# Backend
+backend/target/
+backend/build/
+backend/.gradle/
+
+# Local settings and secrets
+.env
+*.local.properties
+.idea/
+*.iml
+.DS_Store
+Thumbs.db

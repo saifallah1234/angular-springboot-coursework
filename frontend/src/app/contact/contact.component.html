@@ -1,0 +1,33 @@
+<div>
+    <div>
+        <button class="btn btn-primary mb-5" (click)="onAdd()"> Add Contact</button>
+    </div>
+    <br>
+
+        <h2>Contacts</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>detail</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+        <tbody>
+        <div *ngIf="contacts.length>0 ;else noComment">
+            <div *ngFor="let item of contacts, let i=index">
+                <tr>
+                {{i}}: {{item.name}}
+                </tr>
+                <tr><button routerLink="/contacts/{{item.id}}">Details</button></tr>
+                <tr><button (click)="onDelete(item.id)">Delete</button></tr>
+            </div>
+
+            </div>
+            </tbody>
+        </table>
+        </div>
+    <ng-template #noComment>
+        <p>No Comment</p>
+
+    </ng-template>

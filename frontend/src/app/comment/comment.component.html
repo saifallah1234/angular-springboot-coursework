@@ -1,0 +1,16 @@
+<div>
+        <h2>Messages</h2>
+        <div *ngIf="commentList.length>0 ;else noComment">
+            <div *ngFor="let item of commentList, let i=index, let iseven=even">
+                <div *ngIf="iseven">
+                {{i}}: {{item.content}}  on the Date {{item.date | date: 'Y MM d'}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noComment>
+        <p>No Comment</p>
+
+    </ng-template>
